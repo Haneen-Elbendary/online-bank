@@ -1,0 +1,159 @@
+/* Mobile First . */
+
+/* All screens  except phones*/
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+/* Mobile and Tablets */
+@media (max-width: 892px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+  main {
+    padding: 0;
+    scroll-behavior: none;
+  }
+  header .logo {
+    height: 23px;
+  }
+  nav ul,
+  header a.active {
+    display: none;
+  }
+  header i {
+    width: 30px;
+  }
+  header ul {
+    position: absolute;
+    top: calc(100% - 1px);
+    z-index: 2;
+    width: 190px;
+    right: 5px;
+    background-color: #eee;
+  }
+  header ul li {
+    padding: 15px 35px;
+    transition: all 0.2s;
+  }
+  /* should make the ul fixed while hover */
+  .icon:hover + ul,
+  ul:hover {
+    display: block;
+  }
+  header ul li:hover {
+    padding: 25px 40px;
+  }
+  .icon:hover:after {
+    content: "";
+    top: calc(100% - 14px);
+    right: 4px;
+    position: absolute;
+    border-width: 14px;
+    border-color: var(--White--) transparent transparent transparent;
+    border-style: solid;
+  }
+  .content .request,
+  .content .images {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .content .images {
+    order: 1;
+  }
+  .content .request {
+    order: 2;
+    padding: 0 40px;
+    position: relative;
+    top: -103px;
+  }
+
+  .content .request h1,
+  .content .request p {
+    margin: 0 auto;
+  }
+  .content .request h1 {
+    margin-bottom: 20px;
+  }
+  .content .request p {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .content .request a {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .content .images {
+    top: -137px;
+  }
+  .content .images img {
+    position: absolute;
+    width: 100%;
+    right: 0;
+  }
+  .second {
+    padding: 60px 0;
+  }
+  .feature {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro {
+    text-align: center;
+  }
+
+  .intro p {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .feature p {
+    text-align: center;
+  }
+  .third h3 {
+    text-align: center;
+  }
+  .third .article {
+    width: 90%;
+    margin: 10px auto;
+  }
+  footer .container {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .left,
+  .right {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .left img {
+    margin-bottom: 30px;
+  }
+  .left .links {
+    margin-bottom: 30px;
+  }
+  .first,
+  .sec {
+    text-align: center;
+  }
+  .sec {
+    margin-bottom: 30px;
+  }
+
+  .left {
+    flex-direction: column;
+    align-items: center;
+  }
+  .right {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 893px) {
+  header i {
+    display: none !important;
+  }
+}

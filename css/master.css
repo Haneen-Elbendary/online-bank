@@ -1,0 +1,327 @@
+/* Start Global rules */
+
+/* ### Font
+
+- Family: [Public Sans](https://fonts.google.com/specimen/Public+Sans)
+- Weights: 300, 400, 700 
+
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.public-sans-<uniquifier> {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-size: 1.125rem;
+  font-family: "Public Sans", sans-serif;
+  font-weight: var(--noraml-w-);
+  font-optical-sizing: auto;
+  text-transform: capitalize;
+}
+/* End Global rules */
+
+/* Start main-components */
+:root {
+  /* ### Primary */
+  --Dark-Blue--: #2d314d;
+  --Lime-Green--: #31d35c;
+  --Bright-Cyan--: #2bb7da;
+  --soft-gray--: #777;
+  --dark-gray--: #535353;
+  /* ### Neutral */
+  --Grayish-Blue--: #9698a6;
+  --Light-Grayish-Blue--: #f3f4f6;
+  --Very-Light-Gray--: #fafafa;
+  --White--: #fff;
+  /*  ### Font  */
+  --light-w-: 300;
+  --noraml-w-: 400;
+  --bold-w-: 700;
+}
+.container {
+  margin: 0 auto;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*End main-components */
+
+/* Start MAIN Section */
+
+/* Start Header */
+main {
+  background-color: var(--Very-Light-Gray--);
+}
+header {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  height: 99px;
+  background-color: var(--White--);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.header-bk {
+  width: 100%;
+  background-color: var(--White--);
+  z-index: 2;
+  position: relative;
+}
+header .logo {
+  display: block;
+  height: 23px;
+}
+nav {
+  position: relative;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 22px;
+}
+nav ul li {
+  padding-bottom: 15px;
+}
+nav ul a {
+  text-decoration: none;
+  color: var(--soft-gray--);
+}
+nav ul li:hover,
+nav li.active {
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(
+      to right,
+      var(--Lime-Green--),
+      var(--Bright-Cyan--)
+    )
+    1;
+  color: var(--dark-gray--);
+}
+a.active {
+  display: block;
+  text-decoration: none;
+  color: var(--White--);
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 0;
+  align-self: flex-start;
+  background-image: linear-gradient(
+    to right,
+    var(--Lime-Green--),
+    var(--Bright-Cyan--)
+  );
+  transition: all 0.3s;
+}
+a.active:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--Bright-Cyan--);
+  transform: translateY(-0.25em);
+}
+header i {
+  font-size: 27px;
+  display: block;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--Very-Light-Gray--);
+}
+.content .request {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 100px;
+}
+.request h1 {
+  color: var(--Dark-Blue--);
+  font-weight: var(--noraml-w-);
+  width: 80%;
+}
+.request p {
+  color: var(--Grayish-Blue--);
+  font-weight: var(--light-w-);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+.content .images {
+  width: 50%;
+  background-image: url(/images/bg-intro.svg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 99px);
+  position: relative;
+  top: -137px;
+}
+.content .images img {
+  position: absolute;
+  width: 100%;
+  right: -100px;
+}
+
+/* End Header */
+
+/* End MAIN Section */
+/* Start Second Section */
+.second {
+  background-color: var(--Light-Grayish-Blue--);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.intro {
+  margin-bottom: 20px;
+}
+.intro h3 {
+  color: var(--Dark-Blue--);
+  font-weight: var(--noraml-w-);
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.intro p {
+  color: var(--Grayish-Blue--);
+  width: 70%;
+  line-height: 1.7;
+}
+.features {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.feature {
+  width: 180px;
+
+  margin-top: 40px;
+}
+.feature h3 {
+  font-weight: var(--noraml-w-);
+  color: var(--Dark-Blue--);
+  font-size: 23px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.feature p {
+  font-size: 15px;
+  color: var(--Grayish-Blue--);
+  line-height: 1.7;
+}
+/* End Second Section */
+/* Start third section */
+.third {
+  background-color: var(--Very-Light-Gray--);
+  padding: 100px 0;
+}
+.third h3 {
+  color: var(--Dark-Blue--);
+  font-weight: var(--noraml-w-);
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+.third .articles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.third .article {
+  width: 270px;
+  background-color: var(--White--);
+}
+.article .text {
+  padding: 20px;
+}
+.third .article img {
+  width: 100%;
+  height: 203px;
+}
+.article .one,
+.article .three {
+  color: var(--Grayish-Blue--);
+  font-size: 12px;
+  margin: 10px 0;
+}
+.article .two {
+  color: var(--Dark-Blue--);
+  margin: 10px 0;
+}
+.article .three {
+  font-size: 15px;
+}
+/* End third section */
+/* Start footer */
+footer {
+  background-color: var(--Dark-Blue--);
+  padding: 30px 0;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .left {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .left .one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links i {
+  color: var(--White--);
+  margin-right: 10px;
+}
+.left .first li,
+.left .sec li {
+  margin-top: 10px;
+}
+.left .first a,
+.left .sec a {
+  color: var(--Grayish-Blue--);
+  text-decoration: none;
+}
+.left .first a:hover,
+.left .sec a:hover,
+.links i:hover {
+  color: var(--Lime-Green--);
+}
+footer .right {
+  width: 25%;
+}
+.right .active {
+  width: fit-content;
+  margin: 0 auto 25px;
+}
+.right p {
+  color: var(--dark-gray--);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* End footer */
